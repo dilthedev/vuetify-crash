@@ -1,0 +1,230 @@
+
+
+                                         <!--BUTTONS-->
+    <!-- <v-btn class="pink white--text">Click Me</v-btn>
+    <v-btn depressed color="pink">Click Me</v-btn>
+    <v-btn flat color="pink">Click Me</v-btn>
+
+    <v-btn depressed class="pink white--text">
+      <v-icon>email</v-icon> <span>Email Me</span> 
+    </v-btn>
+
+    <v-btn depressed small class="pink white--text">
+    <v-icon>email</v-icon> <span>Email Me</span> 
+    </v-btn>
+
+    <v-btn depressed large class="pink white--text">
+    <span>Email Me </span>
+    <v-icon right large>email</v-icon>  
+    </v-btn>
+
+    <v-btn depressed fab small dark color="purple">
+
+    <v-icon>favorite</v-icon>  
+    </v-btn> -->
+
+    <!-- <v-btn class="hidden-md-and-down">Click Me</v-btn> -->
+    <!-- <v-btn class="hidden-md-and-up">Click Me</v-btn> -->
+    <!-- <v-btn class="hidden-sm-only">Click Me</v-btn> -->
+
+
+        //GRID SYSTEM
+
+              <v-layout row wrap>
+              <v-flex xs12 md6>
+                <v-btn outline block class="primary">1</v-btn>
+              </v-flex>
+              <v-flex xs4 md2>
+                <v-btn outline block class="primary">2</v-btn>
+              </v-flex>
+                <v-flex xs4 md2>
+                <v-btn outline block class="primary">2</v-btn>
+              </v-flex>
+                <v-flex xs4 md2>
+                <v-btn outline block class="primary">2</v-btn>
+              </v-flex>
+            </v-layout>
+
+
+            <v-layout row wrap justify-space-around>
+              <v-flex xs4 md3 >
+                <v-btn outline block class="success">1</v-btn>
+              </v-flex>
+              <v-flex xs4 md3 >
+                <v-btn outline block class="success">1</v-btn>
+              </v-flex>
+            </v-layout>
+
+
+
+
+            //FORMS
+
+
+ <v-form v-model="valid">
+    <v-container>
+      <v-layout>
+        <v-flex
+          xs12
+          md4
+        >
+          <v-text-field
+            v-model="email"
+            :rules="emailRules"
+            label="E-mail"
+            required
+          ></v-text-field>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-form>
+
+
+
+
+  //SignIN default
+
+   <div class="signIn">
+    <h1 class="subheading grey--text">Sign In</h1>
+          
+          <v-container class="my-5">
+
+         <v-layout>
+        <v-flex xs12 sm6 offset-sm3>
+            <v-card>
+          <v-container fill-height fluid>
+            <v-layout fill-height>
+              <v-flex xs12 align-end flexbox>
+                <span class="headline">Sign In</span>
+              </v-flex>
+            </v-layout>
+          </v-container>
+        <v-form v-model="valid">
+    <v-container>
+      <v-layout>
+        <v-flex xs12 md4>        
+         <v-text-field  v-model="email" :rules="emailRules" label="E-mail" required></v-text-field>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-form>
+        <v-card-actions>     
+              
+            <v-btn class="right" flat color="primary"><span>Next</span></v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-flex>
+  </v-layout>
+              
+
+          </v-container>
+
+  </div>
+
+
+  ///////////////////////////////////////////// V-Stepper
+
+  <div id="app">
+  <v-app id="inspire">
+    <v-stepper v-model="e1">
+  
+      <v-stepper-items>
+        <v-stepper-content step="1">
+          <v-card
+            class="mb-5"
+            color="grey lighten-1"
+            height="200px"
+          ></v-card>
+  
+          <v-btn
+            color="primary"
+            @click="e1 = 2"
+          >
+            Continue
+          </v-btn>
+  
+          <v-btn flat>Cancel</v-btn>
+        </v-stepper-content>
+  
+        <v-stepper-content step="2">
+          <v-card
+            class="mb-5"
+            color="grey lighten-1"
+            height="200px"
+          ></v-card>
+  
+          <v-btn
+            color="primary"
+            @click="e1 = 3"
+          >
+            Continue
+          </v-btn>
+  
+          <v-btn flat>Cancel</v-btn>
+        </v-stepper-content>
+  
+        <v-stepper-content step="3">
+          <v-card
+            class="mb-5"
+            color="grey lighten-1"
+            height="200px"
+          ></v-card>
+  
+          <v-btn
+            color="primary"
+            @click="e1 = 1"
+          >
+            Continue
+          </v-btn>
+  
+          <v-btn flat>Cancel</v-btn>
+        </v-stepper-content>
+      </v-stepper-items>
+    </v-stepper>
+  </v-app>
+</div>
+
+
+/////////////////////////////////////////////////////// CURRENT SIGNIN
+
+ <div class="signIn">
+    
+        <v-card display="hidden" max-width="600px">
+            <v-card>
+                <v-card-title>
+                    <h1>Sign In</h1>
+                </v-card-title>
+                <v-card-text>
+                    <v-form class="px-3">
+                        <v-text-field label="Email or Username" v-model="email" prepend-icon="email"></v-text-field>
+                    </v-form>
+                    <p>No Account? <a href="#">Create One</a></p>
+                    <a href="">Sign In Options</a>
+                    <br/>
+                    <v-btn color="primary">Next</v-btn>
+                </v-card-text>
+            </v-card>
+        </v-card>
+
+         <v-card id="two" max-width="600px">
+            <v-card>
+                <v-card-title>
+                    <h1>Enter Password</h1>
+                </v-card-title>
+                <v-card-text>
+                    <v-form class="px-3">
+                        <v-text-field label="Password" v-model="password" prepend-icon="fingerprint"></v-text-field>
+                    </v-form>
+                    <v-checkbox v-model="checkbox1" label="Keep Me signed In"></v-checkbox>
+                    <p><a href="#">Forgot my password?</a></p>                  
+                    <v-btn color="primary">Back</v-btn>
+                    <v-btn float="right" color="primary">Next</v-btn>
+                </v-card-text>
+            </v-card>
+        </v-card>
+
+
+  </div>
+
+
+
